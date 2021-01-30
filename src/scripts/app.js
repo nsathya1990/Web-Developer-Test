@@ -1,3 +1,8 @@
-// Scripts start here
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from '../App';
 
-console.log('Welcome to my App');
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+);

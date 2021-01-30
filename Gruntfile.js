@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
   const sass = require('node-sass');
 
@@ -30,15 +30,15 @@ module.exports = function(grunt) {
     },
 
     sass: {
-        options: {
-          implementation: sass,
-          sourceMap: true
-        },
-        dist: {
-          files: {
-              'public/styles/app.css': 'src/styles/app.scss'
-          }
+      options: {
+        implementation: sass,
+        sourceMap: true
+      },
+      dist: {
+        files: {
+          'public/styles/app.css': 'src/styles/app.scss'
         }
+      }
     },
 
     uglify: {
@@ -59,14 +59,15 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.loadNpmTasks('grunt-contrib-jshint');
+  // grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
+  // grunt.loadNpmTasks('grunt-contrib-uglify');
 
 
-  grunt.registerTask('build', ['jshint', 'sass', 'uglify', 'copy']);
+  // grunt.registerTask('build', ['jshint', 'sass', 'uglify', 'copy']);
+  grunt.registerTask('build', ['sass', 'copy']);
   grunt.registerTask('dev', ['build', 'watch']);
   grunt.registerTask('default', ['build']);
 
