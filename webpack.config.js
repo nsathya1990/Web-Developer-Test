@@ -23,7 +23,7 @@ module.exports = {
     },
     output: {
         filename: 'app.js',
-        path: __dirname + '/public/scripts'
+        path: __dirname + '/public'
     },
     plugins: [HtmlWebpackPluginConfig]
 };
