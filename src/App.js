@@ -1,9 +1,52 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-class App extends React.Component {
+import { Home } from './pages/Home';
+import { Products } from './pages/Products';
+import { News } from './pages/News';
+import { Checkout } from './pages/Checkout';
+import { NoMatch } from './pages/NoMatch';
+
+class App extends Component {
     render() {
         return (
-            <div>Beginning the Development of AKQA</div>
+            <Router>
+                <div>
+                    <nav>
+                        <ul>
+                            <li>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/products">Products</Link>
+                            </li>
+                            <li>
+                                <Link to="/news">News</Link>
+                            </li>
+                            <li>
+                                <Link to="/check-out">Checkout</Link>
+                            </li>
+                            <li>
+                                <Link to="/news">News</Link>
+                            </li>
+                        </ul>
+                    </nav>
+                    <Switch>
+                        <Route exact path="/">
+                            <Home />
+                        </Route>
+                        <Route path="/products">
+                            <Products />
+                        </Route>
+                        <Route path="/news">
+                            <News />
+                        </Route>
+                        <Route path="/check-out">
+                            <Checkout />
+                        </Route>
+                    </Switch>
+                </div>
+            </Router>
         );
     }
 }
