@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
-import { Home } from './pages/Home';
+import { Home } from './pages/home/home';
 import { Products } from './pages/Products';
 import { News } from './pages/News';
 import { Checkout } from './pages/Checkout';
-import { NoMatch } from './pages/NoMatch';
 
 class App extends Component {
     render() {
