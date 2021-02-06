@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 import { Home } from './pages/home/home';
-import { Products } from './pages/Products';
-import { News } from './pages/News';
+import Products from './pages/Products';
+import News from './pages/News';
 import { Checkout } from './pages/Checkout';
 
 import './styles/app.scss';
@@ -11,6 +11,19 @@ import './styles/app.scss';
 class App extends Component {
     render() {
         return (
+            <Router>
+                <main>
+                    <Switch>
+                        <Route path="/" component={Home} exact />
+                        <Route path="/products" component={Products} />
+                        <Route path="/news" component={News} />
+                        <Route path="/check-out" component={Checkout} />
+                        <Route component={Error} />
+                    </Switch>
+                </main>
+            </Router>
+        );
+        /* return (
             <Router>
                 <div>
                     <nav>
@@ -33,9 +46,7 @@ class App extends Component {
                         </ul>
                     </nav>
                     <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
+                        <Route exact path="/"><Home /></Route>
                         <Route path="/products">
                             <Products />
                         </Route>
@@ -48,7 +59,7 @@ class App extends Component {
                     </Switch>
                 </div>
             </Router>
-        );
+        ); */
     }
 }
 
