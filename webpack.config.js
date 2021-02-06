@@ -30,7 +30,7 @@ module.exports = {
                         sideEffects: true
                     },
                     {
-                        test: /\.(gif|svg|jpg|png)$/,
+                        test: /\.(ttf|eot|svg|gif|woff|woff2|gif|svg|jpg|png)$/,
                         loader: "file-loader",
                     }
                 ]
