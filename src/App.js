@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
-import { Home } from './pages/home/home';
+import Home from './pages/home/home';
+import Footer from './components/footer/footer'
 import Products from './pages/Products';
 import News from './pages/News';
 import { Checkout } from './pages/Checkout';
@@ -11,55 +12,18 @@ import './styles/app.scss';
 class App extends Component {
     render() {
         return (
-            <Router>
-                <main>
-                    <Switch>
-                        <Route path="/" component={Home} exact />
-                        <Route path="/products" component={Products} />
-                        <Route path="/news" component={News} />
-                        <Route path="/check-out" component={Checkout} />
-                        <Route component={Error} />
-                    </Switch>
-                </main>
-            </Router>
+            <main>
+                <Home />
+                <Footer />
+                <Switch>
+                    <Route path="/" exact component={Home} />
+                    <Route path="/home" component={Home} />
+                    <Route path="/products" component={Products} />
+                    <Route path="/news" component={News} />
+                    <Route path="/check-out" component={Checkout} />
+                </Switch>
+            </main>
         );
-        /* return (
-            <Router>
-                <div>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/products">Products</Link>
-                            </li>
-                            <li>
-                                <Link to="/news">News</Link>
-                            </li>
-                            <li>
-                                <Link to="/check-out">Checkout</Link>
-                            </li>
-                            <li>
-                                <Link to="/news">News</Link>
-                            </li>
-                        </ul>
-                    </nav>
-                    <Switch>
-                        <Route exact path="/"><Home /></Route>
-                        <Route path="/products">
-                            <Products />
-                        </Route>
-                        <Route path="/news">
-                            <News />
-                        </Route>
-                        <Route path="/check-out">
-                            <Checkout />
-                        </Route>
-                    </Switch>
-                </div>
-            </Router>
-        ); */
     }
 }
 
