@@ -6,6 +6,8 @@ import { Products } from './pages/Products';
 import { News } from './pages/News';
 import { Checkout } from './pages/Checkout';
 
+import './styles/app.scss';
+
 class App extends Component {
     render() {
         return (

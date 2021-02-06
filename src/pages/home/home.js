@@ -4,7 +4,7 @@ import classes from './home.module.scss';
 
 export const Home = () => (
     <div>
-        <div className="top-bar">
+        <div className={classes.TopBar}>
             <div className={classes.Logo}> Logo</div>
             <div className={classes.Menu}>
                 <ul>
@@ -15,7 +15,7 @@ export const Home = () => (
                 </ul>
             </div>
         </div>
-        <div className="banner">
+        <div className={classes.Banner}>
             <div className="banner-text">
                 <div className="banner-text-items">
                     <h2>Banner Text Heading</h2>

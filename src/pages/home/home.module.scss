@@ -1,12 +1,14 @@
-.Menu {
-    background: blue;
-    color: white;
+.Banner {
+    background: url("../../assets/images/masthead.jpg");
+    width: 100%;
+    background-size: cover;
 }
 
-.Menu:hover {
-    background: lightblue;
-}
-
-.Logo {
-    color: red;
+.TopBar {
+    background-color: #000;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
 }

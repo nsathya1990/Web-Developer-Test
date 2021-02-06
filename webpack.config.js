@@ -28,6 +28,10 @@ module.exports = {
                             "sass-loader",
                         ],
                         sideEffects: true
+                    },
+                    {
+                        test: /\.(gif|svg|jpg|png)$/,
+                        loader: "file-loader",
                     }
                 ]
             }
