@@ -1,14 +1,18 @@
 import React from 'react';
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 import classes from './home.module.scss';
 
+import Logo from '../../components/logo/logo';
+
 export const Home = () => (
-    <div>
+    <Router>
         <div className={classes.TopBar}>
-            <div className={classes.Logo}>APPS</div>
+            <Link to="/news" className={classes.Logo}><Logo /></Link>
             <div className={classes.Menu}>
                 <ul>
-                    <li><a href="#">Products</a></li>
+                    {/* <li><a href="#">Products</a></li> */}
+                    <li><Link to="/products">Products</Link></li>
                     <li><a href="#">News</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Cart</a></li>
@@ -38,7 +42,7 @@ export const Home = () => (
             </div>
         </div>
         <footer>
-            <div className={classes.Logo}>APPS</div>
+            <Link to="/news" className={classes.Logo}><Logo /></Link>
             <div className={classes.FtMenu}>
                 <ul>
                     <li><a href="#">Products</a></li>
@@ -64,5 +68,5 @@ export const Home = () => (
                 </div>
             </div>
         </footer>
-    </div>
+    </Router>
 );
