@@ -1,13 +1,25 @@
-// Styles start here
 $fa-font-path: "./webfonts/";
-// @import "../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss";
+$font-path: "../assets/fonts" !default;
+
 @import "./fontawesome/scss/fontawesome.scss";
 @import "./fontawesome/scss/solid.scss";
 @import "./fontawesome/scss/brands.scss";
 
+
+@font-face{
+    font-family: LibreFranklinExtraLight;
+    src: url('#{$font-path}/LibreFranklin-ExtraLight.ttf');
+}
+
+@font-face{
+    font-family: LibreFranklinRegular;
+    src: url('#{$font-path}/LibreFranklin-Regular.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 body {

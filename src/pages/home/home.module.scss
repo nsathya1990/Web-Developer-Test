@@ -152,9 +152,10 @@ footer {
                 padding: 2% 0;
 
                 a {
-                    color: #000;
-                    font-size: 20px;
+                    color: #7e7e7e;
                     text-decoration: none;
+                    font-size: 16px;
+                    font-weight: 600;
                 }
             }
         }
@@ -182,7 +183,8 @@ footer {
         .Legal {
             text-align: right;
             padding: 10%;
-            font-size: 17px;
+            font-size: 15px;
+            font-weight: 600;
 
             ul {
                 list-style-type: none;
