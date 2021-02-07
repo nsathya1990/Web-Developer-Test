@@ -1,6 +1,5 @@
 footer {
     border-top: 3px solid #f8f8f8;
-    padding: 3% 0;
     position: relative;
     z-index: 1;
     display: -webkit-box;
@@ -8,20 +7,7 @@ footer {
     display: -ms-flexbox;
     display: flex;
 
-    .FtLogo {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        margin: auto;
-        text-align: center;
-    }
-
     .FtMenu {
-        -webkit-box-flex: 6;
-        -webkit-flex: 6;
-        -ms-flex: 6;
-        flex: 6;
         
         ul {
             display: -webkit-box;
@@ -36,10 +22,6 @@ footer {
             flex-flow: column wrap;
             
             li {
-                -webkit-box-flex: 1;
-                -webkit-flex: 1;
-                -ms-flex: 1;
-                flex: 1;
                 text-align: left;
                 text-transform: uppercase;
                 padding: 2% 0;
@@ -55,11 +37,6 @@ footer {
     }
 
     .FtSocialLegal {
-        -webkit-box-flex: 2;
-        -webkit-flex: 2;
-        -ms-flex: 2;
-        flex: 2;
-        margin: auto;
         color: #757575;
         
         .Social ul {
@@ -67,15 +44,12 @@ footer {
             display: flex;
 
             li {
-                flex: 1;
                 font-size: x-large;
                 cursor: pointer;
             }
         }
 
         .Legal {
-            text-align: right;
-            padding: 10%;
             font-size: 15px;
             font-weight: 600;
 
@@ -88,5 +62,104 @@ footer {
                 }
             }
         }
+    }
+}
+
+/* smartphones, iPhone, portrait 480x320 phones */
+@media (min-width:320px) {
+    footer {
+        padding: 5%;
+        flex-direction: column;
+
+        &>div {
+            padding: 4% 0;
+        }
+
+        .FtLogo {
+            margin: 0;
+            text-align: left;
+        }
+
+        .FtMenu ul li {
+            padding: 4% 0;
+        }
+
+        .FtSocialLegal {
+            margin: 0;
+
+            &>div {
+                padding: 4% 0;
+            }
+
+            .Social>ul li {
+                flex-basis: 17%;
+                flex-grow: 0
+            }
+
+            .Legal {
+                text-align: left;
+                padding: 4% 0;
+            }
+        }
+    }
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) {
+    footer {
+        
+        &>div {
+            padding: 2% 0;
+        }
+        
+        .FtMenu ul li {
+            padding: 3% 0;
+        }
+
+        .FtSocialLegal .Social>ul li {
+            flex-basis: 12%;
+        }
+    }
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:961px) {
+
+    footer {
+        flex-direction: row;
+        padding: 0 2%;
+
+        .FtLogo {
+            margin: auto;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+        }
+        
+        .FtMenu {
+            -webkit-box-flex: 6;
+            -webkit-flex: 6;
+            -ms-flex: 6;
+            flex: 6;
+        }
+
+        .FtSocialLegal {
+            margin: auto;
+            text-align: right;
+            -webkit-box-flex: 2;
+            -webkit-flex: 2;
+            -ms-flex: 2;
+            flex: 2;
+
+            .Social>ul li {
+                flex: 1;
+            }
+
+            .Legal {
+                text-align: right;
+            }
+        }
+        
     }
 }

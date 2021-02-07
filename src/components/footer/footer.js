@@ -12,7 +12,7 @@ const Footer = () => (
         </div>
         <div className={classes.FtMenu}>
             <ul>
-                <li><Link to="">Products</Link></li>
+                <li><Link to="/products">Products</Link></li>
                 <li><a href="#">News</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Your Cart</a></li>
