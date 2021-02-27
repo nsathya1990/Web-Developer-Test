@@ -1,23 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import classes from './home.module.scss';
 
-import Logo from '../../components/logo/logo';
-
 const Home = () => (
     <div>
-        <div className={classes.TopBar}>
-            <Link to="/home" className={classes.Logo}><Logo /></Link>
-            <div className={classes.Menu}>
-                <ul>
-                    <li><Link to="/products">Products</Link></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Cart</a></li>
-                </ul>
-            </div>
-        </div>
         <div className={classes.Banner}>
             <div className={classes.BannerText}>
                 <div className={classes.BannerTextItems}>
