@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Switch, NavigationItem } from 'react-router-dom';
 
-import Logo from '../logo/logo';
+import Logo from '../Logo/Logo';
 
 import classes from './header.module.scss';
 
@@ -12,18 +12,10 @@ const Header = () => (
     </Link>
     <div className={classes.Menu}>
       <ul>
-        <li>
-          <Link to='/products'>Products</Link>
-        </li>
-        <li>
-          <a href='#'>News</a>
-        </li>
-        <li>
-          <a href='#'>Contact</a>
-        </li>
-        <li>
-          <a href='#'>Cart</a>
-        </li>
+        <NavigationItem to='/products'>Products</NavigationItem>
+        <NavigationItem href='#'>News</NavigationItem>
+        <NavigationItem href='#'>Contact</NavigationItem>
+        <NavigationItem href='#'>Cart</NavigationItem>
       </ul>
     </div>
   </header>

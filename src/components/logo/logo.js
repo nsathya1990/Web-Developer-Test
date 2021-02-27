@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-import classes from './logo.module.scss';
+import classes from './Logo.module.scss';
 
-const Logo = () => (
-    <Link to="/home" className={classes.Logo}>
-        Apps
-    </Link>
+const logo = (props) => (
+  <div className={classes.Logo} style={{ height: props.height }}>
+    <h3>Apps</h3>
+  </div>
 );
 
-export default Logo;
+export default logo;
