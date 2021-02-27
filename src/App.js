@@ -7,7 +7,7 @@ import News from './pages/News';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 
-import Home from './pages/home/home';
+import Home from './components/Home/Home';
 
 import './styles/app.scss';
 
@@ -20,7 +20,7 @@ class App extends Component {
           <Route path='/news' component={News} />
           <Route path='/contact' component={Contact} />
           <Route path='/cart' component={Checkout} />
-          <Route path='/home' exact component={Home} />
+          <Route path='/home' component={Home} />
           <Route path='/' exact component={Home} />
         </Switch>
       </Layout>
