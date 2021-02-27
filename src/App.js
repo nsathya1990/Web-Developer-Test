@@ -14,17 +14,16 @@ import './styles/app.scss';
 class App extends Component {
   render() {
     return (
-      <div>
-        <Layout>
-          <Switch>
-            <Route path='/products' component={Products} />
-            <Route path='/news' component={News} />
-            <Route path='/contact' component={Contact} />
-            <Route path='/cart' component={Checkout} />
-            <Route path='/' exact component={Home} />
-          </Switch>
-        </Layout>
-      </div>
+      <Layout>
+        <Switch>
+          <Route path='/products' component={Products} />
+          <Route path='/news' component={News} />
+          <Route path='/contact' component={Contact} />
+          <Route path='/cart' component={Checkout} />
+          <Route path='/home' exact component={Home} />
+          <Route path='/' exact component={Home} />
+        </Switch>
+      </Layout>
     );
   }
 }

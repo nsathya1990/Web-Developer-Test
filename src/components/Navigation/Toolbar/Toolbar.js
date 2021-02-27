@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import classes from './Toolbar.module.scss';
 
@@ -8,9 +9,9 @@ import DrawerToggle from '../SideDrawer/DrawerToggle/DrawerToggle';
 
 const toolbar = (props) => (
   <header className={classes.Toolbar}>
-    <div className={classes.Logo}>
+    <NavLink to='/home' className={classes.Logo}>
       <Logo />
-    </div>
+    </NavLink>
     <nav className={classes.DesktopOnly}>
       <NavigationItems />
     </nav>
