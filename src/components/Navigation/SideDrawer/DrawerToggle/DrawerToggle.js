@@ -3,10 +3,13 @@ import React from 'react';
 import classes from './DrawerToggle.module.scss';
 
 const drawerToggle = (props) => (
-  <div className={classes.DrawerToggle} onClick={props.clicked}>
-    <div></div>
-    <div></div>
-    <div></div>
+  <div className={classes.DrawerToggleP} onClick={props.clicked}>
+    <div>MENU</div>
+    <div className={classes.DrawerToggle}>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 );
 
