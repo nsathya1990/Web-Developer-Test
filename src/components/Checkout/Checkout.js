@@ -206,7 +206,7 @@ class Checkout extends Component {
           {subTotalRow}
           {vatRow}
           {totalCostRow}
-          <div style={{ textAlign: 'right', paddingRight: '20%' }}>
+          <div className={classes.ByNowBtn}>
             <Button disabled={!formValid}>Buy Now</Button>
           </div>
         </form>

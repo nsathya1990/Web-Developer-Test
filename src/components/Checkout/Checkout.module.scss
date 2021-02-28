@@ -18,13 +18,12 @@
     display: flex;
     list-style-type: none;
     font-size: small;
-    padding: 1% 0;
+    padding: 5% 0;
     flex-direction: column;
 
     li:first-of-type {
       border-bottom: 2px solid #dfdfdf;
       padding: 3% 0;
-      font-weight: bold;
       font-size: larger;
     }
 
@@ -89,10 +88,31 @@
       }
     }
   }
+}
 
-  .FormRow:first-of-type {
-    display: none;
+.FormRow:first-of-type {
+  display: none;
+}
+
+.FormRow:nth-last-of-type(3),
+.FormRow:nth-last-of-type(2),
+.FormRow:last-of-type {
+  flex-direction: row;
+  padding: 0;
+
+  li:first-of-type {
+    border-bottom: none;
+    flex: 1;
   }
+
+  li:nth-last-of-type(2) {
+    font-size: larger;
+  }
+}
+
+.ByNowBtn {
+  text-align: right;
+  padding: 0;
 }
 
 @media (min-width: 600px) {
@@ -114,6 +134,7 @@
 
     .FormRow {
       flex-direction: row;
+      padding: 1% 0;
 
       li:first-of-type {
         flex: 3;
@@ -145,5 +166,9 @@
         }
       }
     }
+  }
+
+  .ByNowBtn {
+    padding-right: '20%';
   }
 }
