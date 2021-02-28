@@ -1,17 +1,16 @@
 .CheckoutBody {
-  padding: 3% 25%;
+  padding: 10% 3%;
 
   .CheckoutHeadline {
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 
     header {
       font-size: x-large;
-      padding-bottom: 1%;
+      padding-bottom: 5%;
     }
 
     p {
-      font-size: small;
-      // text-align: justify;
+      font-size: 15px;
     }
   }
 
@@ -71,5 +70,23 @@
 
   .FormRow:first-of-type {
     border-bottom: 2px solid #dfdfdf;
+  }
+}
+
+@media (min-width: 600px) {
+  .CheckoutBody {
+    padding: 3% 26%;
+
+    .CheckoutHeadline {
+      padding-bottom: 3%;
+
+      header {
+        padding-bottom: 1%;
+      }
+
+      p {
+        // font-size: small;
+      }
+    }
   }
 }
