@@ -19,6 +19,7 @@
     list-style-type: none;
     font-size: small;
     padding: 1% 0;
+    flex-direction: column;
 
     li:first-of-type {
       flex: 3;
@@ -69,7 +70,7 @@
   }
 
   .FormRow:first-of-type {
-    border-bottom: 2px solid #dfdfdf;
+    display: none;
   }
 }
 
@@ -83,10 +84,15 @@
       header {
         padding-bottom: 1%;
       }
+    }
 
-      p {
-        // font-size: small;
-      }
+    .FormRow:first-of-type {
+      border-bottom: 2px solid #dfdfdf;
+      display: flex;
+    }
+
+    .FormRow {
+      flex-direction: row;
     }
   }
 }
