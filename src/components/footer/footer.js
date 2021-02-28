@@ -11,7 +11,7 @@ import {
 
 import Logo from '../Logo/Logo';
 
-import classes from './footer.module.scss';
+import classes from './Footer.module.scss';
 
 const Footer = () => (
   <footer>

@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Layout from './components/hoc/Layout/Layout';
-import Products from './pages/Products';
-import News from './pages/News';
-import Contact from './pages/Contact';
 import Checkout from './components/Checkout/Checkout';
+import InProgress from './components/InProgress/InProgress';
 
 import Home from './components/Home/Home';
 
@@ -16,9 +14,9 @@ class App extends Component {
     return (
       <Layout>
         <Switch>
-          <Route path='/products' component={Products} />
-          <Route path='/news' component={News} />
-          <Route path='/contact' component={Contact} />
+          <Route path='/products' component={InProgress} />
+          <Route path='/news' component={InProgress} />
+          <Route path='/contact' component={InProgress} />
           <Route path='/cart' component={Checkout} />
           <Route path='/home' component={Home} />
           <Route path='/' exact component={Home} />
