@@ -1,5 +1,5 @@
 footer {
-  height: 30vh;
+  // height: 30vh;
   border-top: 3px solid #f8f8f8;
   position: relative;
   z-index: 1;
@@ -79,7 +79,7 @@ footer {
     flex-direction: column;
 
     & > div {
-      padding: 4% 0;
+      padding: 3% 0;
     }
 
     .FtLogo {
@@ -88,7 +88,7 @@ footer {
     }
 
     .FtMenu ul li {
-      padding: 4% 0;
+      padding: 3% 0;
     }
 
     .FtSocialLegal {

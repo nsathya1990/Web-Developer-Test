@@ -43,16 +43,16 @@ const Footer = () => (
       <div className={classes.Social}>
         <ul>
           <li onClick={() => openInNewTab('https://www.google.com')}>
-            <FontAwesomeIcon icon={faGooglePlusG} size='lg' />
+            <FontAwesomeIcon icon={faGooglePlusG} />
           </li>
           <li onClick={() => openInNewTab('https://www.facebook.com')}>
-            <FontAwesomeIcon icon={faFacebookF} size='lg' />
+            <FontAwesomeIcon icon={faFacebookF} />
           </li>
           <li onClick={() => openInNewTab('https://www.instagram.com')}>
-            <FontAwesomeIcon icon={faInstagram} size='lg' />
+            <FontAwesomeIcon icon={faInstagram} />
           </li>
           <li onClick={() => openInNewTab('https://www.twitter.com')}>
-            <FontAwesomeIcon icon={faTwitter} size='lg' />
+            <FontAwesomeIcon icon={faTwitter} />
           </li>
         </ul>
       </div>

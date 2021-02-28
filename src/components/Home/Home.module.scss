@@ -9,15 +9,16 @@
     display: -ms-flexbox;
     display: flex;
     padding: 17% 0;
+    width: 90%;
 
     .BannerTextItems {
       color: #fff;
       margin: auto;
       text-align: left;
-      width: 70%;
+      width: 90%;
 
       h4 {
-        margin-bottom: 20px;
+        margin-bottom: 0;
       }
 
       .BannerTextTitle {
@@ -47,11 +48,11 @@
     header {
       font-size: x-large;
       text-align: center;
-      padding: 0 15%;
+      padding: 0 25%;
     }
 
     p {
-      padding: 1% 35%;
+      padding: 5% 20%;
       text-align: center;
       font-size: small;
     }
@@ -68,32 +69,36 @@
 
   .Main2 {
     display: flex;
-    min-height: 65vh;
+    flex-direction: column;
+    height: 90vh;
     background-color: #fff;
 
     .Main2Banner {
       flex: 1;
+      order: 2;
       background: url('../../assets/images/fog.jpg');
       background-size: cover;
     }
 
     .Main2Content {
       flex: 1;
+      order: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
 
       header {
         text-align: left;
+        padding: 3% 10%;
       }
 
       p {
-        padding: 3% 15%;
+        padding: 3% 10%;
         text-align: left;
       }
 
       a {
-        padding: 3% 15%;
+        padding: 3% 10%;
         text-align: left;
 
         Button {
@@ -104,7 +109,62 @@
   }
 }
 
-@media all and (max-width: 800px) {
+@media (min-width: 600px) {
+  .Banner {
+    .BannerText {
+      width: 70%;
+
+      .BannerTextItems {
+        width: 70%;
+
+        h4 {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  .MainContent {
+    .Main1,
+    .Main2 {
+      p {
+        padding: 1% 35%;
+      }
+    }
+    .Main2 {
+      flex-direction: row;
+      height: 80vh;
+
+      .Main2Banner {
+        order: 1;
+      }
+
+      .Main2Content {
+        order: 2;
+
+        header {
+          padding: 0 15%;
+        }
+
+        p {
+          padding: 3% 15%;
+          text-align: left;
+        }
+
+        a {
+          padding: 3% 15%;
+          text-align: left;
+
+          Button {
+            margin: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 600px) {
   .TopBar {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -128,14 +188,6 @@
       li {
         padding: 5px;
       }
-    }
-  }
-
-  .BannerTextItems {
-    width: 100%;
-
-    h2 {
-      font-size: 1.5em;
     }
   }
 
