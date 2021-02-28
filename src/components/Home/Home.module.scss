@@ -1,94 +1,149 @@
-
 .Banner {
-    background: url("../../assets/images/masthead.jpg");
-    width: 100%;
-    background-size: cover;
+  background: url('../../assets/images/fog.jpg');
+  width: 100%;
+  background-size: cover;
 
-    .BannerText {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        padding: 17% 0;
+  .BannerText {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 17% 0;
 
-        .BannerTextItems {
-            color: #fff;
-            margin: auto;
-            text-align: left;
-            width: 70%;
+    .BannerTextItems {
+      color: #fff;
+      margin: auto;
+      text-align: left;
+      width: 70%;
 
-            h4 {
-                margin-bottom: 20px;
-            }
+      h4 {
+        margin-bottom: 20px;
+      }
 
-            .BannerTextTitle {
-                font-size: 50px;
-
-            }
-        }
+      .BannerTextTitle {
+        font-size: 50px;
+      }
     }
+  }
 }
 
 /* main-content */
 
 .MainContent {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+
+  .Main1,
+  .Main2 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    // padding: 3%;
+    min-height: 200px;
+
+    header {
+      font-size: x-large;
+      text-align: center;
+      padding: 0 15%;
+    }
+
+    p {
+      padding: 1% 35%;
+      text-align: center;
+      font-size: small;
+    }
+  }
+
+  .Main1 {
+    padding: 4%;
+    background-color: #fafafa;
     display: flex;
     flex-direction: column;
-    padding: 5% 0;
+    align-items: center;
+    justify-content: center;
+  }
 
-    .Main1 {
-        -webkit-box-flex: 1;
-        -webkit-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        padding: 3%;
-        text-align: center;
+  .Main2 {
+    display: flex;
+    min-height: 70vh;
+
+    .Main2Banner {
+      flex: 1;
+      background: url('../../assets/images/fog.jpg');
+      background-size: cover;
     }
+
+    .Main2Content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      header {
+        text-align: left;
+      }
+
+      p {
+        padding: 3% 15%;
+        text-align: left;
+      }
+
+      a {
+        padding: 3% 15%;
+        text-align: left;
+
+        Button {
+          margin: 0px;
+        }
+      }
+    }
+  }
 }
 
-@media all and (max-width:800px) {
-    .TopBar {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        text-align: center;
+@media all and (max-width: 800px) {
+  .TopBar {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center;
 
-        .Logo {
-            padding: 18px 0 0;
-        }
-
-        .Menu ul {
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-            flex-direction: column;
-            margin-top: 0;
-
-            li {
-                padding: 5px;
-            }
-        }
+    .Logo {
+      padding: 18px 0 0;
     }
 
-    .BannerTextItems {
-        width: 100%;
+    .Menu ul {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-top: 0;
 
-        h2 {
-            font-size: 1.5em;
-        }
+      li {
+        padding: 5px;
+      }
     }
+  }
 
-    .MainContent {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-        flex-direction: column;   
+  .BannerTextItems {
+    width: 100%;
+
+    h2 {
+      font-size: 1.5em;
     }
+  }
+
+  .MainContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
 }

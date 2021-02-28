@@ -1,4 +1,5 @@
 footer {
+    height: 30vh;
     border-top: 3px solid #f8f8f8;
     position: relative;
     z-index: 1;
@@ -109,11 +110,11 @@ footer {
     footer {
         
         &>div {
-            padding: 2% 0;
+            padding: 1% 0;
         }
         
         .FtMenu ul li {
-            padding: 3% 0;
+            padding: 2% 0;
         }
 
         .FtSocialLegal .Social>ul li {

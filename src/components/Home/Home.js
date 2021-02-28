@@ -16,34 +16,29 @@ const Home = () => (
       </div>
     </div>
     <div className={classes.MainContent}>
-      <div className={classes.Main1}>
-        <h2>Innovation and experience design agency.</h2>
+      <article className={classes.Main1}>
+        <header>Innovation and experience design agency.</header>
         <p>
-          Lorem Ipsum is simply dummysk text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
+          Apps is an innovation and experience design agency. We exist to create
+          a better future with you.
         </p>
         <NavLink to='/products'>
           <Button>Products</Button>
         </NavLink>
-      </div>
-      <div className={classes.Main1}>
-        <h2>The imaginative application of art and science.</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p>
-        <NavLink to='/news'>
-          <Button>Read Latest</Button>
-        </NavLink>
-      </div>
+      </article>
+      <article className={classes.Main2}>
+        <div className={classes.Main2Banner}></div>
+        <div className={classes.Main2Content}>
+          <header>The imaginative application of art and science.</header>
+          <p>
+            We architect, design and deliver iconic experiences, services and
+            products that improve people's lives
+          </p>
+          <NavLink to='/news'>
+            <Button>Read Latest</Button>
+          </NavLink>
+        </div>
+      </article>
     </div>
   </div>
 );
