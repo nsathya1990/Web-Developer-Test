@@ -1,11 +1,6 @@
 $fa-font-path: "./webfonts/";
 $font-path: "../assets/fonts" !default;
 
-@import "./fontawesome/scss/fontawesome.scss";
-@import "./fontawesome/scss/solid.scss";
-@import "./fontawesome/scss/brands.scss";
-
-
 @font-face{
     font-family: LibreFranklinExtraLight;
     src: url('#{$font-path}/LibreFranklin-ExtraLight.ttf');

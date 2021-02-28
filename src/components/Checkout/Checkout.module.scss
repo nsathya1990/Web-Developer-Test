@@ -117,7 +117,7 @@
 
 @media (min-width: 600px) {
   .CheckoutBody {
-    padding: 3% 23%;
+    padding: 3% 5%;
 
     .CheckoutHeadline {
       padding-bottom: 3%;
@@ -170,5 +170,12 @@
 
   .ByNowBtn {
     padding-right: '20%';
+  }
+}
+
+
+@media (min-width: 900px) {
+  .CheckoutBody {
+    padding: 3% 25%;
   }
 }
