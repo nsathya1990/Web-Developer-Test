@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from '../../axios-orders';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
@@ -45,12 +46,34 @@ class Checkout extends Component {
     } else {
       products[index].quantity = event.target.value;
     }
-    products[index].cost = this.totalCost(products[index].price, products[index].quantity);
+    products[index].cost = this.totalCost(
+      products[index].price,
+      products[index].quantity
+    );
     this.setState({ products });
   }
 
   isFormValid() {
-    return this.state.products.length !== 0 && this.state.products.every(product => product.quantity > 0);
+    // checking for decimal in the quantity field
+    return (
+      this.state.products.length !== 0 &&
+      this.state.products.every((product) => product.quantity > 0)
+    );
+  }
+
+  orderHandler(event) {
+    console.log('orderd');
+    event.preventDefault();
+    axios
+      .post('/orders.json', this.state.products)
+      .then(() => {
+        // this.setState({ loading: false });
+        this.props.history.push('/');
+      })
+      .catch((error) => {
+        // this.setState({ loading: false });
+        console.error(error);
+      });
   }
 
   render() {
@@ -126,7 +149,9 @@ class Checkout extends Component {
         <li></li>
         <li></li>
         <li>
-          <strong>€{(Math.round((subTotal + vatAmt) * 100) / 100).toFixed(2)}</strong>
+          <strong>
+            €{(Math.round((subTotal + vatAmt) * 100) / 100).toFixed(2)}
+          </strong>
         </li>
         <li></li>
       </ul>
@@ -143,7 +168,7 @@ class Checkout extends Component {
             quantities or remove items before continuing purchase.
           </p>
         </div>
-        <form>
+        <form onSubmit={this.orderHandler.bind(this)}>
           <ul className={classes.FormRow}>
             <li>
               <strong>Product</strong>
