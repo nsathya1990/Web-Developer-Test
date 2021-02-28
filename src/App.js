@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 
 import Layout from './components/hoc/Layout/Layout';
 import Checkout from './components/Checkout/Checkout';
@@ -20,6 +20,7 @@ class App extends Component {
           <Route path='/cart' component={Checkout} />
           <Route path='/home' component={Home} />
           <Route path='/' exact component={Home} />
+          <Redirect from="*" to='/' />
         </Switch>
       </Layout>
     );

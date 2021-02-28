@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -13,6 +13,11 @@ import Logo from '../Logo/Logo';
 
 import classes from './Footer.module.scss';
 
+const openInNewTab = (url) => {
+  const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+  if (newWindow) newWindow.opener = null;
+};
+
 const Footer = () => (
   <footer>
     <div className={classes.FtLogo}>
@@ -21,32 +26,32 @@ const Footer = () => (
     <div className={classes.FtMenu}>
       <ul>
         <li>
-          <Link to='/products'>Products</Link>
+          <NavLink to='/products'>Products</NavLink>
         </li>
         <li>
-          <a href='#'>News</a>
+          <NavLink to='/news'>News</NavLink>
         </li>
         <li>
-          <a href='#'>Contact</a>
+          <NavLink to='/contact'>Contact</NavLink>
         </li>
         <li>
-          <a href='#'>Your Cart</a>
+          <NavLink to='/cart'>Your Cart</NavLink>
         </li>
       </ul>
     </div>
     <div className={classes.FtSocialLegal}>
       <div className={classes.Social}>
         <ul>
-          <li>
+          <li onClick={() => openInNewTab('https://www.google.com')}>
             <FontAwesomeIcon icon={faGooglePlusG} size='lg' />
           </li>
-          <li>
+          <li onClick={() => openInNewTab('https://www.facebook.com')}>
             <FontAwesomeIcon icon={faFacebookF} size='lg' />
           </li>
-          <li>
+          <li onClick={() => openInNewTab('https://www.instagram.com')}>
             <FontAwesomeIcon icon={faInstagram} size='lg' />
           </li>
-          <li>
+          <li onClick={() => openInNewTab('https://www.twitter.com')}>
             <FontAwesomeIcon icon={faTwitter} size='lg' />
           </li>
         </ul>
