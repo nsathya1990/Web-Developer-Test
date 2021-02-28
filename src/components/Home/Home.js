@@ -1,6 +1,9 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 import classes from './home.module.scss';
+
+import Button from '../UI/Button/Button';
 
 const Home = () => (
   <div>
@@ -23,10 +26,12 @@ const Home = () => (
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </p>
-        <button>Products</button>
+        <NavLink to='/products'>
+          <Button>Products</Button>
+        </NavLink>
       </div>
       <div className={classes.Main1}>
-        <h2>Main Heading Two</h2>
+        <h2>The imaginative application of art and science.</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -35,17 +40,9 @@ const Home = () => (
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </p>
-      </div>
-      <div className={classes.Main1}>
-        <h2>Main Heading Three</h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged.
-        </p>
+        <NavLink to='/news'>
+          <Button>Read Latest</Button>
+        </NavLink>
       </div>
     </div>
   </div>

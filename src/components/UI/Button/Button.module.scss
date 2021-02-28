@@ -1,0 +1,27 @@
+.Button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    text-transform: uppercase;
+}
+
+.Button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.Success {
+    color: #5C9210;
+}
+
+.Danger {
+    color: #944317;
+}
