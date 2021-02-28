@@ -1,0 +1,39 @@
+.CheckoutBody {
+  padding: 3% 25%;
+
+  .CheckoutHeadline {
+    padding-bottom: 5%;
+
+    header {
+      font-size: x-large;
+      padding-bottom: 1%;
+    }
+
+    p {
+      font-size: small;
+      // text-align: justify;
+    }
+  }
+
+  .FormRow {
+    display: flex;
+    list-style-type: none;
+    font-size: small;
+    padding: 1% 0;
+
+    li:first-of-type {
+      flex: 3;
+    }
+    li {
+      flex: 2;
+    }
+    li:last-of-type {
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+  .FormRow:first-of-type {
+    border-bottom: 2px solid #dfdfdf;
+  }
+}

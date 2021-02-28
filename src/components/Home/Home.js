@@ -1,7 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import classes from './home.module.scss';
+import classes from './Home.module.scss';
+import Footer from '../Footer/Footer';
 
 import Button from '../UI/Button/Button';
 
@@ -40,6 +41,7 @@ const Home = () => (
         </div>
       </article>
     </div>
+    <Footer />
   </div>
 );
 

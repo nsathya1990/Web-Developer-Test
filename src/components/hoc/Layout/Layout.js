@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Auxiliary from '../Auxiliary/Auxiliary';
 import Toolbar from '../../Navigation/Toolbar/Toolbar';
-import Footer from '../../Footer/Footer';
 import SideDrawer from '../../Navigation/SideDrawer/SideDrawer';
 
 import classes from './Layout.module.scss';
@@ -31,7 +30,6 @@ class Layout extends Component {
           closed={this.sideDrawerClosedHandler}
         />
         <main className={classes.Content}>{this.props.children}</main>
-        <Footer />
       </Auxiliary>
     );
   }
