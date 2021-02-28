@@ -14,7 +14,7 @@ const Home = () => (
     </div>
     <div className={classes.MainContent}>
       <div className={classes.Main1}>
-        <h2>Main Heading One</h2>
+        <h2>Innovation and experience design agency.</h2>
         <p>
           Lorem Ipsum is simply dummysk text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
@@ -23,6 +23,7 @@ const Home = () => (
           five centuries, but also the leap into electronic typesetting,
           remaining essentially unchanged.
         </p>
+        <button>Products</button>
       </div>
       <div className={classes.Main1}>
         <h2>Main Heading Two</h2>

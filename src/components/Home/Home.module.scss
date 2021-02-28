@@ -9,7 +9,7 @@
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
-        padding: 15% 0;
+        padding: 17% 0;
 
         .BannerTextItems {
             color: #fff;
@@ -36,11 +36,7 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row wrap;
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
+    flex-direction: column;
     padding: 5% 0;
 
     .Main1 {
