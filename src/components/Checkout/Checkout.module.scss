@@ -33,6 +33,40 @@
       color: #007bff;
       cursor: pointer;
     }
+
+    .Quantity {
+      display: flex;
+
+      .QuantityBtn {
+        width: 20px;
+        padding: 1%;
+        color: #007bff;
+        background-color: #fff;
+        border: 1px solid #007bff;
+        cursor: pointer;
+      }
+
+      .QuantityBtn:first-of-type {
+        border-right: none;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      .QuantityBtn:last-of-type {
+        border-left: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+
+      .QuantityInput {
+        width: 25px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #007bff;
+        border-left: none;
+        border-right: none;
+      }
+    }
   }
 
   .FormRow:first-of-type {

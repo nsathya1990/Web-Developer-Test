@@ -36,6 +36,19 @@ class Checkout extends Component {
     this.setState({ products: tempProducts });
   }
 
+  onUpdateQuantity(event, index, operator) {
+    const products = this.state.products.slice();
+    if (operator === '+') {
+      ++products[index].quantity;
+    } else if (operator === '-') {
+      --products[index].quantity;
+    } else {
+      products[index].quantity = event.target.value;
+    }
+    products[index].cost = this.totalCost(products[index].price, products[index].quantity);
+    this.setState({ products });
+  }
+
   render() {
     const formProductRows = this.state.products.map((product, index) => (
       <ul key={index} className={classes.FormRow}>
@@ -43,8 +56,28 @@ class Checkout extends Component {
           {product.name}, {product.size}
         </li>
         <li>€{product.price}</li>
-        <li>{product.quantity}</li>
-        <li>€{product.cost}</li>
+        <li className={classes.Quantity}>
+          <button
+            className={classes.QuantityBtn}
+            type='button'
+            onClick={(event) => this.onUpdateQuantity(event, index, '-')}
+          >
+            -
+          </button>
+          <input
+            className={classes.QuantityInput}
+            value={product.quantity}
+            onChange={(event) => this.onUpdateQuantity(event, index)}
+          />
+          <button
+            className={classes.QuantityBtn}
+            type='button'
+            onClick={(event) => this.onUpdateQuantity(event, index, '+')}
+          >
+            +
+          </button>
+        </li>
+        <li>€{(Math.round(product.cost * 100) / 100).toFixed(2)}</li>
         <li>
           <FontAwesomeIcon
             icon={faTrashAlt}
@@ -60,11 +93,11 @@ class Checkout extends Component {
       0
     );
     const subTotalRow = (
-      <ul className={[classes.FormRow]}>
+      <ul className={[classes.FormRow]} style={{ paddingTop: '5%' }}>
         <li>Subtotal</li>
         <li></li>
         <li></li>
-        <li>€{subTotal}</li>
+        <li>€{(Math.round(subTotal * 100) / 100).toFixed(2)}</li>
         <li></li>
       </ul>
     );
@@ -76,17 +109,21 @@ class Checkout extends Component {
         <li>VAT at 20%</li>
         <li></li>
         <li></li>
-        <li>€{vatAmt}</li>
+        <li>€{(Math.round(vatAmt * 100) / 100).toFixed(2)}</li>
         <li></li>
       </ul>
     );
 
     const totalCostRow = (
       <ul className={[classes.FormRow]}>
-        <li>Total cost</li>
+        <li>
+          <strong>Total cost</strong>
+        </li>
         <li></li>
         <li></li>
-        <li>€{subTotal + vat}</li>
+        <li>
+          <strong>€{(Math.round((subTotal + vatAmt) * 100) / 100).toFixed(2)}</strong>
+        </li>
         <li></li>
       </ul>
     );
@@ -120,7 +157,9 @@ class Checkout extends Component {
           {subTotalRow}
           {vatRow}
           {totalCostRow}
-          <Button>Buy Now</Button>
+          <div style={{ textAlign: 'right', paddingRight: '20%' }}>
+            <Button>Buy Now</Button>
+          </div>
         </form>
       </div>
     );
