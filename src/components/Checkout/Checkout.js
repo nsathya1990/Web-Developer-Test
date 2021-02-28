@@ -86,35 +86,49 @@ class Checkout extends Component {
         <li>
           {product.name}, {product.size}
         </li>
-        <li>€{product.price}</li>
-        <li className={classes.Quantity}>
-          <button
-            className={classes.QuantityBtn}
-            type='button'
-            onClick={(event) => this.onUpdateQuantity(event, index, '-')}
-          >
-            -
-          </button>
-          <input
-            className={classes.QuantityInput}
-            value={product.quantity}
-            onChange={(event) => this.onUpdateQuantity(event, index)}
-          />
-          <button
-            className={classes.QuantityBtn}
-            type='button'
-            onClick={(event) => this.onUpdateQuantity(event, index, '+')}
-          >
-            +
-          </button>
-        </li>
-        <li>€{(Math.round(product.cost * 100) / 100).toFixed(2)}</li>
         <li>
-          <FontAwesomeIcon
-            icon={faTrashAlt}
-            title='Delete'
-            onClick={() => this.onDeleteHandler(index)}
-          />
+          <span className={classes.ProductDetailTitle}>Price</span>
+          <span className={classes.ProductDetailValue}>€{product.price}</span>
+        </li>
+        <li className={classes.Quantity}>
+          <span className={classes.ProductDetailTitle}>Quantity</span>
+          <span className={classes.ProductDetailValue}>
+            <button
+              className={classes.QuantityBtn}
+              type='button'
+              onClick={(event) => this.onUpdateQuantity(event, index, '-')}
+            >
+              -
+            </button>
+            <input
+              className={classes.QuantityInput}
+              value={product.quantity}
+              onChange={(event) => this.onUpdateQuantity(event, index)}
+            />
+            <button
+              className={classes.QuantityBtn}
+              type='button'
+              onClick={(event) => this.onUpdateQuantity(event, index, '+')}
+            >
+              +
+            </button>
+          </span>
+        </li>
+        <li>
+          <span className={classes.ProductDetailTitle}>Cost</span>
+          <span className={classes.ProductDetailValue}>
+            €{(Math.round(product.cost * 100) / 100).toFixed(2)}
+          </span>
+        </li>
+        <li>
+          <span className={classes.ProductDetailTitle}>Remove</span>
+          <span className={classes.ProductDetailValue}>
+            <FontAwesomeIcon
+              icon={faTrashAlt}
+              title='Remove'
+              onClick={() => this.onDeleteHandler(index)}
+            />
+          </span>
         </li>
       </ul>
     ));
