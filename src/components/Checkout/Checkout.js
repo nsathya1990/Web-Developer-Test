@@ -49,6 +49,10 @@ class Checkout extends Component {
     this.setState({ products });
   }
 
+  isFormValid() {
+    return this.state.products.every(product => product.quantity > 0);
+  }
+
   render() {
     const formProductRows = this.state.products.map((product, index) => (
       <ul key={index} className={classes.FormRow}>
@@ -128,6 +132,8 @@ class Checkout extends Component {
       </ul>
     );
 
+    const formValid = this.isFormValid();
+
     return (
       <div className={classes.CheckoutBody}>
         <div className={classes.CheckoutHeadline}>
@@ -158,7 +164,7 @@ class Checkout extends Component {
           {vatRow}
           {totalCostRow}
           <div style={{ textAlign: 'right', paddingRight: '20%' }}>
-            <Button>Buy Now</Button>
+            <Button disabled={!formValid}>Buy Now</Button>
           </div>
         </form>
       </div>
