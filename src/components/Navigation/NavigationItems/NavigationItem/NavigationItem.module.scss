@@ -11,7 +11,7 @@
   width: 100%;
   box-sizing: border-box;
   display: block;
-  color: #111;
+  color: #111111ab;
   text-transform: uppercase;
 }
 
@@ -28,12 +28,11 @@
     text-decoration: none;
     height: 100%;
     padding: 16px 10px;
-    border-bottom: 4px solid transparent;
   }
 
   .NavigationItem a:hover {
     background-color: #dcdcdc;
-    color: #111;
+    color: #111111ab;
     border-radius: 4px;
   }
 }

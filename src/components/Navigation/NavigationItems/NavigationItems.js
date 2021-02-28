@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 import classes from './NavigationItems.module.scss';
 
@@ -13,7 +13,7 @@ const navigationItems = () => (
     <NavigationItem link='/news'>News</NavigationItem>
     <NavigationItem link='/contact'>Contact</NavigationItem>
     <NavigationItem link='/cart'>
-      <FontAwesomeIcon icon={faTrashAlt} />
+    <FontAwesomeIcon icon={faShoppingBasket} title="Checkout" />
     </NavigationItem>
   </ul>
 );

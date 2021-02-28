@@ -4,6 +4,11 @@
   justify-content: space-between;
   width: 100px;
 
+  .MenuText {
+    font-weight: bold;
+    color: #111111ab;
+  }
+
   .DrawerToggle {
     width: 40px;
     height: 50px;
@@ -22,7 +27,7 @@
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   .DrawerToggleP {
     display: none;
   }
