@@ -15,9 +15,7 @@
   text-transform: uppercase;
 }
 
-.NavigationItem a:hover,
-a:active,
-a.active {
+.NavigationItem a:hover {
   color: grey;
 }
 
@@ -37,9 +35,7 @@ a.active {
     border-bottom: 4px solid transparent;
   }
 
-  .NavigationItem a:hover,
-  a:active,
-  a.active {
+  .NavigationItem a:hover {
     background-color: #dcdcdc;
     color: grey;
     border-radius: 5px;
