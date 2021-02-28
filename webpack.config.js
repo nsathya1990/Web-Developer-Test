@@ -42,5 +42,8 @@ module.exports = {
     filename: 'app.[contenthash].js',
     path: __dirname + '/public',
   },
-    plugins: [HtmlWebpackPluginConfig]
+  plugins: [HtmlWebpackPluginConfig],
+  devServer: {
+    historyApiFallback: true,
+  },
 };

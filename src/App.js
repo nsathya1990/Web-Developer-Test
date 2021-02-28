@@ -5,7 +5,7 @@ import Layout from './components/hoc/Layout/Layout';
 import Products from './pages/Products';
 import News from './pages/News';
 import Contact from './pages/Contact';
-import Checkout from './pages/Checkout';
+import Checkout from './components/Checkout/Checkout';
 
 import Home from './components/Home/Home';
 
