@@ -7,12 +7,14 @@ import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 import products from '../../../api/products';
 
 import Button from '../UI/Button/Button';
+import Spinner from '../UI/Spinner/Spinner';
 
 import classes from './Checkout.module.scss';
 
 class Checkout extends Component {
   state = {
     products: [],
+    loading: false,
   };
 
   componentDidMount() {
@@ -54,24 +56,26 @@ class Checkout extends Component {
   }
 
   isFormValid() {
-    // checking for decimal in the quantity field
     return (
       this.state.products.length !== 0 &&
-      this.state.products.every((product) => product.quantity > 0)
+      this.state.products.every(
+        (product) => Number.isInteger(product.quantity) && product.quantity > 0
+      )
     );
   }
 
   orderHandler(event) {
     console.log('orderd');
     event.preventDefault();
+    this.setState({ loading: true });
     axios
       .post('/orders.json', this.state.products)
       .then(() => {
-        // this.setState({ loading: false });
+        this.setState({ loading: false });
         this.props.history.push('/');
       })
       .catch((error) => {
-        // this.setState({ loading: false });
+        this.setState({ loading: false });
         console.error(error);
       });
   }
@@ -159,7 +163,7 @@ class Checkout extends Component {
 
     const formValid = this.isFormValid();
 
-    return (
+    let checkoutForm = (
       <div className={classes.CheckoutBody}>
         <div className={classes.CheckoutHeadline}>
           <header>Your Basket</header>
@@ -194,6 +198,12 @@ class Checkout extends Component {
         </form>
       </div>
     );
+
+    if (this.state.loading) {
+      checkoutForm = <Spinner />;
+    }
+
+    return checkoutForm;
   }
 }
 
