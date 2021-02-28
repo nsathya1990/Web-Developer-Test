@@ -50,7 +50,7 @@ class Checkout extends Component {
   }
 
   isFormValid() {
-    return this.state.products.every(product => product.quantity > 0);
+    return this.state.products.length !== 0 && this.state.products.every(product => product.quantity > 0);
   }
 
   render() {
