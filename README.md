@@ -43,7 +43,8 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 - Assumptions?
 - Decisions?
 - What you used to develop and test?
-    (i) I have the 'axios' package to make http requests, fontawesome packages for icons
+(i) I have the 'axios' package to make http requests, fontawesome packages for icons
+(ii) The orders submitted from the checkout form using POST http request can be viewed here https://apps-web-developer-test-default-rtdb.firebaseio.com/orders.json
 
 
 ## What did you think of this test/exercise?
