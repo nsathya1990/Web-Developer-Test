@@ -43,16 +43,27 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 - Assumptions?
 - Decisions?
 - What you used to develop and test?
-(i) I have the 'axios' package to make http requests, fontawesome packages for icons
-(ii) The orders submitted from the checkout form using POST http request can be viewed here https://apps-web-developer-test-default-rtdb.firebaseio.com/orders.json
+    - Extensive use of 'Flexbox' for layout purposes
+    - The orders submitted from the checkout form are submitted to this endpoint: https://apps-web-developer-test-default-rtdb.firebaseio.com/orders.json using the POST http request
+    - Use of media queries for making the application responsive
 
 - List of tools to develop and debug the application
     - Visual Studio Code
     - Google Chrome browser
 
+- Libraries used
+    - The 'react-router-dom' for navigating from one route to another
+    - The 'axios' package to make http requests
+    - Fontawesome packages for icons such as shopping cart, delete and so on
+    - Babel for compilation purpose
+    - Webpack for bundling my resources
+
+- Time spent
+    - About 3 weeks
+
 ## What did you think of this test/exercise?
 ### What did you like?
-1.
+1. It was fun and challenging. Wiring up Webpack and Babel with React took some time. But, I learnt a lot over the course of this test
 2.
 3.
 
