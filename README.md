@@ -11,8 +11,9 @@ A basic structure of a web application for web developers to develop upon and sh
 
 # Get Started
 
-- Fork this repo
-- Clone your repo
+```
+npm run start
+```
 
 ## Install dependancies
 ```
@@ -42,6 +43,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 - Assumptions?
 - Decisions?
 - What you used to develop and test?
+    (i) I have the 'axios' package to make http requests, fontawesome packages for icons
 
 
 ## What did you think of this test/exercise?
