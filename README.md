@@ -37,6 +37,14 @@ Look in ```./design-assets```
 All free to download or include from [https://fonts.google.com/specimen/Libre+Franklin](https://fonts.google.com/specimen/Libre+Franklin) (Regular and ExtraLight)
 
 ## Which Browsers/Devices or Virtualisation services did you check the application in?
+- Browsers:
+    - Google Chrome
+    - Mozilla Firefox
+    - Safari
+- Type of Devices
+    - Mobile
+    - Tablet
+    - Desktop
 
 
 ## Anything you want to tell us?
@@ -64,7 +72,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 ## What did you think of this test/exercise?
 ### What did you like?
 1. It was fun and challenging. Wiring up Webpack and Babel with React took some time. But, I learnt a lot over the course of this test
-2.
+2. Working on the Checkout form was fun as well. Writing down the equations for incrementer, decrementer and thinking of all the validations that could be added was pretty cool.
 3.
 
 ### What could be improved?
