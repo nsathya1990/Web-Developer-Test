@@ -46,6 +46,9 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 (i) I have the 'axios' package to make http requests, fontawesome packages for icons
 (ii) The orders submitted from the checkout form using POST http request can be viewed here https://apps-web-developer-test-default-rtdb.firebaseio.com/orders.json
 
+- List of tools to develop and debug the application
+    - Visual Studio Code
+    - Google Chrome browser
 
 ## What did you think of this test/exercise?
 ### What did you like?
