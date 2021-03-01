@@ -55,6 +55,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
     - Extensive use of 'Flexbox' for layout purposes
     - The orders submitted from the checkout form are submitted to this endpoint: https://apps-web-developer-test-default-rtdb.firebaseio.com/orders.json using the POST http request
     - Use of media queries for making the application responsive
+    - I am still writing the test cases. I'll finish that in 2-3 days.
 
 - List of tools to develop and debug the application
     - Visual Studio Code
