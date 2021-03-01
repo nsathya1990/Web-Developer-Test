@@ -49,7 +49,7 @@ All free to download or include from [https://fonts.google.com/specimen/Libre+Fr
 
 ## Anything you want to tell us?
 - Assumptions?
-    - The checkout page available on the /cart route assumes that the user has already added products to his/ her cart. At the checkout page, the user only finalizes the products and their quantities
+    - The checkout page available on the /cart route assumes that the user has already added products to his/ her cart. At the checkout page, the user only finalizes the products and their quantities and submits them.
 - Decisions?
 - What you used to develop and test?
     - Extensive use of 'Flexbox' for layout purposes
